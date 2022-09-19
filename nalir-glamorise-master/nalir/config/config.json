@@ -1,0 +1,11 @@
+{
+    "connection":{
+        "host": "localhost",
+        "password":"root",
+        "user":"root",
+        "database":"seade"
+    },
+    "loggingMode": "ERROR",
+    "zfiles_path":"zfiles",
+    "jars_path":"jars/new_jars"
+}

@@ -1,0 +1,214 @@
+<?xml version="1.0" ?>
+<!-- define tokens for dependency parse tree -->
+<!-- all terms are in lower case -->
+<types>
+<!-- Command Token, verb -->
+<CMT_V>
+<phrase>qual
+<example>Qual foi a produção de óleo no estado do Rio de Janeiro?</example>
+</phrase>
+<phrase>quais
+<example>Quais campos produzem mais óleo por mês?</example>
+</phrase>
+<phrase>quantos
+<example>Quantos campos há no Paraná?</example>
+</phrase>
+<phrase>quem</phrase>
+<phrase>o que</phrase>
+<phrase>quanto</phrase>
+<phrase>diga
+<example>Diga-me todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>dê
+<example>Dê-me todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>retorne
+<example>Retorne todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>liste
+<example>Liste todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>encontre
+<example>Encontre todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>ache
+<example>Ache todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>mostre
+<example>Mostre todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>recupere
+<example>Recupere todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>procure
+<example>Procure todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>selecione
+<example>Selecione todos os livros publicados no ano de 1993.</example>
+</phrase>
+<!-- TODO: double check this -->
+<phrase>produza
+<example>Produza todos os livros publicados no ano de 1993.</example>
+</phrase>
+<phrase>gere
+<example>Gere todos os livros publicados no ano de 1993.</example>
+</phrase>
+    <phrase>devolva
+    <example>Devolva todos os livros publicados no ano de 1993.</example>
+    </phrase>
+
+</CMT_V>
+<!-- Order By Token -->
+<OBT>
+<phrase>Ordenados por
+<example>Encontre todos os livros publicados por Ayn Rand, ordenados por título.</example>
+</phrase>
+<phrase>
+Na ordem de
+</phrase>
+
+</OBT>
+
+<!-- Function Token, adjective -->
+<FT>
+    <phrase>mínimo
+<function>min</function>
+</phrase>
+    <phrase>mínima
+<function>min</function>
+</phrase>
+<phrase>máximo
+<function>max</function>
+</phrase>
+    <phrase>máxima
+<function>max</function>
+</phrase>
+<!--<phrase> o maior
+<function>max</function>
+</phrase>-->
+<phrase>menor
+<function>min</function>
+</phrase>
+<phrase>média
+<function>avg</function>
+</phrase>
+    <phrase>média de
+<function>avg</function>
+</phrase>
+<phrase>total
+<function>sum</function>
+</phrase>
+    <phrase>soma
+<function>sum</function>
+</phrase>
+    <phrase>soma de
+<function>sum</function>
+</phrase>
+        <phrase>total de
+<function>sum</function>
+</phrase>
+            <phrase>quantidade de
+<function>count</function>
+</phrase>
+    <phrase>número de
+<function>count</function>
+</phrase>
+</FT>
+<!-- Operator Token, adj -->
+<OT>
+<phrase>anterior
+<operator>&lt;</operator>
+<example>Encontre todos os livros de Ayn Rand, onde o ano de cada livro é anterior ao ano de "Fountain Head".</example>
+</phrase>
+<phrase>posterior
+<operator>&gt;</operator>
+<example>Encontre todos os livros de Ayn Rand, onde o ano de cada livro é posterior ao ano de "Fountain Head".</example>
+</phrase>
+<phrase>mais de
+<operator>&gt;</operator>
+<example>Encontre todos os livros com mais de 2 editores.</example>
+</phrase>
+<phrase>maior do que
+<operator>&gt;</operator>
+<example>Encontre todos os livros cujo tamanho seja maior do que 2.</example>
+</phrase>
+    <phrase>maior que
+<operator>&gt;</operator>
+<example>Encontre todos os livros cujo tamanho seja maior que 2.</example>
+</phrase>
+    <phrase>maior
+<operator>&gt;</operator>
+<example>Encontre todos os livros cujo tamanho seja maior do que 2.</example>
+</phrase>
+<phrase>menos de
+<operator>&lt;</operator>
+<example>Encontre todos os livros com menos de 5 editores.</example>
+</phrase>
+<phrase>menor que 
+<operator>&lt;</operator>
+<example>Encontre todos os livros cujo tamanho seja menor que 4.</example>
+</phrase>
+<phrase>pelo menos
+<operator>&gt;=</operator>
+</phrase>
+<phrase>antes de
+<operator>&lt;</operator>
+<example>Encontre todos os livros de Ayn Rand publicados antes de 1949.</example>
+</phrase>
+<phrase>depois de
+<operator>&gt;</operator>
+<example>Encontre todos os livros publicados depois de 2004.</example>
+</phrase>
+<phrase>após
+<operator>&gt;</operator>
+<example>Encontre todos os livros publicados apos 2004.</example>
+</phrase>
+<phrase>igual
+<operator>=</operator>
+<example>Encontre todos os livros de Ayn Rand cujo ano seja igual ao ano de "Fountain Head".</example>
+</phrase>
+<phrase>o mesmo
+<operator>=</operator>
+<example>Retorne todos os artigos cujo autor seja o mesmo autor de "Java e XML".</example>
+</phrase>
+<phrase>tanto quanto
+<operator>=</operator>
+</phrase>
+</OT>
+<!-- Qualifier Token -->
+<QT>
+<phrase>cada
+<quantity>cada</quantity>
+</phrase>
+<phrase>por
+<quantity>cada</quantity>
+</phrase>
+<phrase>para
+<quantity>cada</quantity>
+</phrase>
+<phrase>algum
+<quantity>algum</quantity>
+<example>Retorne todos os livros cujo nome de alguns autores termina com "Green". </example>
+</phrase>
+<phrase>qualquer
+<quantity>qualquer</quantity>
+</phrase>
+<phrase>quaisquer
+<quantity>quaisquer</quantity>
+</phrase>
+<phrase>nenhum
+<quantity>nenhum</quantity>
+</phrase>
+    <phrase>todos
+<quantity>todos</quantity>
+</phrase>
+    <phrase>tudo
+<quantity>tudo</quantity>
+</phrase>
+</QT>
+<!-- Negation Token -->
+<NEG>
+<phrase>não</phrase>
+<phrase>nada</phrase>
+</NEG>
+</types>

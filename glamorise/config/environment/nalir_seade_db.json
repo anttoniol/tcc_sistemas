@@ -1,0 +1,11 @@
+{
+    "connection":{
+        "host": "localhost",
+        "password":"root",
+        "user":"root",
+        "database":"seade"
+    },
+    "loggingMode": "ERROR",
+    "zfiles_path":"/home/somebody/tcc/nalir-glamorise-master/zfiles",
+    "jars_path":"/home/somebody/tcc/nalir-glamorise-master/jars/new_jars"
+}

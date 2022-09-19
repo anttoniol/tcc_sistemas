@@ -1,0 +1,30 @@
+{
+   "nlidb_nlq_translate_fields": false,
+   "nlidb_attempt_level": 3,
+   "nlidb_field_synonym": {
+       "código": "casos.codigo_ibge",
+       "município": "casos.nome_munic",
+       "região": "casos.regiao",
+       "óbito": "casos.obito",
+       "raça": "casos.raca_cor",
+       "idade": "casos.idade",
+       "sexo": "casos.cs_sexo",
+       "diagnóstico": "casos.diagnostico_covid19",
+       "asma": "casos.asma",
+       "cardiopatia": "casos.cardiopatia",
+       "diabetes": "casos.diabetes",
+       "doenca_hematológica": "casos.doenca_hematologica",
+       "doenca_hepática": "casos.doenca_hepatica",
+       "doenca_neurológica": "casos.doenca_neurologica",
+       "doenca_renal": "casos.doenca_renal",
+       "imunodepressão": "casos.imunodepressao",
+       "obesidade": "casos.obesidade",
+       "pneumopatia": "casos.pneumopatia",
+       "puérpera": "casos.puerpera",
+       "síndrome_de_down": "casos.sindrome_de_down"
+   },
+   "nlidb_aggregation": false,
+   "nlidb_aggregation_exceptions":[
+     "casos.idade"
+   ]
+}

@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+    {% block content %}
+      {% if type == 'glamorise_mock_anp' %}
+        {% include "mock_anp.html" %}
+      {% elif type == 'glamorise_nalir_anp' %}
+        {% include "nalir_anp.html" %}
+      {% elif type == 'glamorise_nalir_mas' %}      
+        {% include "nalir_mas.html" %}      
+      {% elif type == 'glamorise_danke_anp' %}
+        {% include "danke_anp.html" %}            
+      {% endif %}           
+      <!-- Nav tabs -->
+      <nav>
+        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active fa fa-home" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+          <a class="nav-item nav-link fa fa-cog" id="nav-profile-tab" data-toggle="tab" href="#nav-settings-glamorise" role="tab" aria-controls="nav-profile" aria-selected="false">GLAMORISE Settings</a>
+          <a class="nav-item nav-link fa fa-cog" id="nav-profile-tab" data-toggle="tab" href="#nav-settings-glamorise-interface" role="tab" aria-controls="nav-profile" aria-selected="false">GLAMORISE NLIDB Interface Settings</a>
+          {% if type == 'glamorise_nalir_anp' or type == 'glamorise_nalir_mas' %}
+            <a class="nav-item nav-link fa fa-cog" id="nav-profile-tab" data-toggle="tab" href="#nav-settings-nalir" role="tab" aria-controls="nav-profile" aria-selected="false">NaLIR Settings</a>
+          {% endif %}
+      </nav>
+      <!-- Tab panes -->
+      <form>          
+        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">             
+            <div class="row form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    Ask a Natural</br>Language Query</br>(NLQ).                       
+                  </span>          
+                </div>
+                <textarea class="form-control form-control-lg" id="glamoriseTextarea" rows="5" name="nlq"></textarea>        
+              </div>                   
+            </div>
+            <div class="row">
+                <div class="input-group-btn">              
+                  <button id="submitButton" type="submit" class="btn btn-default">Send query</button> 
+                  {% if type == 'glamorise_mock_anp' %}
+                    <button id="instructionsButton" type="button" class="btn btn-default">Hide Instructions</button> 
+                  {% else %}                    
+                    <button id="instructionsButton" type="button" class="btn btn-default">Show Instructions</button>   
+                  {% endif %}  
+                  <input type="hidden" id="hiddenType" name="type" value="{{ type }}">
+                </div>
+            </div>                     
+          </div>
+          <div class="tab-pane fade" id="nav-settings-glamorise">
+              <h2>GLAMORISE Settings</h2>  
+              <div class="row form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      JSON</br>Config</br>File.                       
+                    </span>          
+                  </div>
+                  <textarea class="form-control form-control-lg" id="glamoriseJsonConfig" name="glamoriseJsonConfig" rows="30">{{config_glamorise}}</textarea>        
+                </div>                   
+              </div>              
+          </div>   
+          <div class="tab-pane fade" id="nav-settings-glamorise-interface">
+            <h2>GLAMORISE NLIDB Interface Settings</h2>  
+            <div class="row form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    JSON</br>Config</br>File.                       
+                  </span>          
+                </div>
+                <textarea class="form-control form-control-lg" id="glamoriseJsonConfigInterface" name="glamoriseJsonConfigInterface" rows="30">{{config_glamorise_interface}}</textarea>        
+              </div>                   
+            </div>              
+        </div>   
+          {% if type == 'glamorise_nalir_anp' or type == 'glamorise_nalir_mas' %}
+            <div class="tab-pane fade" id="nav-settings-nalir">
+              <h2>NaLIR Settings</h2>  
+              <div class="row form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      XML</br>Config</br>File.                       
+                    </span>          
+                  </div>
+                  <textarea class="form-control form-control-lg" id="nalirXmlConfig" name="nalirXmlConfig" rows="30">{{nalir_tokens}}</textarea>        
+                </div>                   
+              </div>              
+            </div>   
+          {% endif %}     
+        </div>
+      </form>  
+      </br>      
+      <div class="row " id="loadingDiv" style="display:none;">
+        <div class="mx-auto">
+          <h2> Loading...</h2>
+          <h2> Depending on the query, the process may take a few minutes. </h2>
+          <div class="image">
+            <img src="{{url_for('static', filename='images/spinner.gif')}}" alt="spinner" id = "spinner">    
+          </div>            
+        </div>           
+      </div>
+      <div id="result" class="alert alert-success" role="alert" style="display:none;">
+      </div>  
+    {% endblock content %}

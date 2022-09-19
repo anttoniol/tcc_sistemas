@@ -1,0 +1,88 @@
+[
+    {
+        "name": "casos",
+        "attributes": [
+            {
+                "name": "codigo_ibge",
+                "type": "pk"
+            },
+            {
+                "name": "nome_munic",
+                "type": "text"
+            },
+            {
+                "name": "regiao",
+                "type": "text"
+            },
+            {
+                "name": "obito",
+                "type": "text"
+            },
+            {
+                "name": "raca_cor",
+                "type": "text"
+            },
+            {
+                "name": "idade",
+                "type": "number"
+            },
+            {
+                "name": "cs_sexo",
+                "type": "text"
+            },
+            {
+                "name": "diagnostico_covid19",
+                "type": "text"
+            },
+            {
+                "name": "asma",
+                "type": "text"
+            },
+            {
+                "name": "cardiopatia",
+                "type": "text"
+            },
+            {
+                "name": "diabetes",
+                "type": "text"
+            },
+            {
+                "name": "doenca_hematologica",
+                "type": "text"
+            },
+            {
+                "name": "doenca_hepatica",
+                "type": "text"
+            },
+            {
+                "name": "doenca_neurologica",
+                "type": "text"
+            },
+            {
+                "name": "doenca_renal",
+                "type": "text"
+            },
+            {
+                "name": "imunodepressao",
+                "type": "text"
+            },
+            {
+                "name": "obesidade",
+                "type": "text"
+            },
+            {
+                "name": "pneumopatia",
+                "type": "text"
+            },
+            {
+                "name": "puerpera",
+                "type": "text"
+            },
+            {
+                "name": "sindrome_de_down",
+                "type": "text"
+            }
+        ],
+        "type": "entity"
+    }
+]

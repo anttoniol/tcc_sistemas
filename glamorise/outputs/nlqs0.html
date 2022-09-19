@@ -1,0 +1,410 @@
+SENTENÇA: retorne todos os municípios em casos</br></br>**GLAMORISE Internal Properties**</br>**Preprocessor Properties**</br>pre_prepared_query = 'retorne todos os municípios em casos'</br>**NLIDB Interface Properties**</br>nlidb_interface_first_attempt_sql = 'SELECT casos.nome_munic\nFROM casos'</br>nlidb_interface_second_attempt_sql = 'SELECT casos.nome_munic\nFROM casos'</br>nlidb_interface_sql = 'SELECT casos.nome_munic as casos_nome_munic FROM casos'</br>**Postprocessor Properties**</br>pos_glamorise_sql = 'SELECT * FROM NLIDB_result_set LIMIT 100'</br>pos_group_by_fields = ['casos_nome_munic']</br>**Timers**</br>timer_pre: 0.01 sec</br>timer_nlidb_execution_first_and_second_attempt: 11.18 sec</br>timer_nlidb_execution_third_attempt: nan sec</br>timer_nlidb_json_result_set: 0.03 sec</br>timer_pos: 0.30 sec</br>timer_exibition: 0.00 sec</br>**Results**<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>casos_nome_munic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mauá</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Guarujá</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Taboão da Serra</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mirassol</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Laranjal Paulista</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Guarulhos</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Diadema</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Piedade</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Ipaussu</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Morro Agudo</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Miracatu</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Porto Ferreira</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>São Caetano do Sul</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Marília</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Diadema</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Várzea Paulista</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Fernandópolis</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Nazaré Paulista</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Piracicaba</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Itu</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>São José dos Campos</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>São Bernardo do Campo</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Bragança Paulista</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Caraguatatuba</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Guará</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Caieiras</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>General Salgado</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Paulicéia</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>São José do Rio Preto</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Agudos</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Limeira</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Garça</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Irapuru</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>Porto Ferreira</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Barretos</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Miracatu</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>São José do Rio Preto</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Franca</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Floreal</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Areiópolis</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Araraquara</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>Mogi das Cruzes</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>São Vicente</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Campinas</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>Porto Ferreira</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>Ourinhos</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>Estrela d'Oeste</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>São José dos Campos</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>Itu</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>Bauru</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>Lençóis Paulista</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>Bauru</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Louveira</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>Gastão Vidigal</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>Carapicuíba</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>Araras</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>Cerquilho</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>Osasco</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>Jundiaí</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>Cubatão</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>Botucatu</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>Guarulhos</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>Marília</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>Presidente Prudente</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>Praia Grande</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>Mairiporã</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>Araras</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>Sorocaba</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>Indiaporã</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>São José dos Campos</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>Amparo</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>Itararé</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>São Lourenço da Serra</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>Cotia</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>Cerquilho</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>Conchal</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>Porto Feliz</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Pinhalzinho</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Santana de Parnaíba</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Araçatuba</td>
+    </tr>
+  </tbody>
+</table></br>total timer_pre : 0.01 sec</br>total timer_nlidb_execution_first_and_second_attempt : 11.18 sec</br>total timer_nlidb_json_result_set : 0.03 sec</br>total timer_pos : 0.30 sec</br>total timer_exibition : 0.00 sec</br>total timer_total : 11.52 sec

@@ -1,0 +1,287 @@
+{
+    "show_dependency_parse_tree": true,
+    "show_recognized_patterns": true,
+    "total_row" : true,
+    "debug": true,    
+    "noun_lemmatization": true,
+    "count_with_distinct" : true,    
+    "units_of_measurement": [
+        "metros cúbicos"
+    ],
+    "compound_pattern_dep": [
+        {
+            "POS": "NOUN",
+            "DEP": "compound"
+        },
+        {
+            "POS": "NOUN"
+        }
+    ],
+    "compound_pattern_of": [
+        {
+            "POS": "NOUN",
+            "LOWER": {
+                "NOT_IN": [
+                    "number"
+                ]
+            }
+        },
+        {
+            "LOWER": "of",
+            "POS": "ADP"
+        },
+        {
+            "POS": "NOUN"
+        }
+    ],
+    "default_pattern": [
+        {
+            "POS": "ADV",
+            "OP": "*"
+        },
+        {
+            "POS": "ADJ",
+            "OP": "*"
+        },
+        {
+            "POS": "NOUN",
+            "LOWER": {
+                "NOT_IN": [
+                    "number"
+                ]
+            }
+        }
+    ],
+    "config_glamorise": {
+        "than options": {
+            "reserved_words": [
+                "mais que",
+                "maior que",
+                "menor que",
+                "igual a",
+                "maior que ou igual a",
+                "menor que ou igual a"
+            ],
+            "pre_having_conditions": [
+                ">",
+                ">",
+                "<",
+                "=",
+                ">=",
+                "<="
+            ],
+            "specific_pattern": [
+                {
+                    "LIKE_NUM": true
+                },
+                {
+                    "POS": "ADV",
+                    "OP": "*"
+                },
+                {
+                    "POS": "ADJ",
+                    "OP": "*"
+                },
+                {
+                    "POS": "NOUN",
+                    "OP": "*"
+                },
+                {
+                    "POS": "NOUN"
+                }
+            ],
+            "pre_cut_text": false
+        },
+        "group by": {
+            "reserved_words": [
+                "por",
+                "cada"
+            ],
+            "pre_group_by": true,
+            "pre_cut_text": true
+        },
+        "group by and": {
+            "reserved_words": [
+                "por",
+                "para cada",
+                "de cada"
+            ],
+            "pre_group_by": true,
+            "specific_pattern": [
+                {
+                    "POS": "ADV",
+                    "OP": "*"
+                },
+                {
+                    "POS": "ADJ",
+                    "OP": "*"
+                },
+                {
+                    "POS": "NOUN",
+                    "LOWER": {
+                        "NOT_IN": [
+                            "number"
+                        ]
+                    }
+                },
+                {
+                    "LOWER": "and"
+                },
+                {
+                    "POS": "NOUN",
+                    "LOWER": {
+                        "NOT_IN": [
+                            "number"
+                        ]
+                    }
+                }
+            ],
+            "pre_cut_text": false
+        },
+        "how options": {
+            "reserved_words": [
+                "quantos",
+                "quantas"
+            ],
+            "pre_aggregation_functions": [
+                "count",
+                "sum"
+            ],
+            "pre_cut_text": true
+        },
+        "other count": {
+            "reserved_words": [
+                "número de",
+                "número dos",
+                "número das"
+            ],
+            "pre_aggregation_functions": "count",
+            "pre_cut_text": true
+        },
+        "other sum": {
+            "reserved_words": [
+                "total",
+                "soma",
+                "somado"
+            ],
+            "pre_aggregation_functions": "sum",
+            "pre_cut_text": true
+        },
+        "average options": {
+            "reserved_words": [
+                "média"
+            ],
+            "pre_aggregation_functions": "avg",
+            "pre_cut_text": true
+        },
+        "superlative min": {
+            "reserved_words": [
+                "menor",
+                "mais curto",
+                "mais barato",
+                "mais perto",
+                "mais baixo",
+                "pior",
+                "mais recente",
+                "primeiro",
+                "min",
+                "mínimo",
+                "menor número de",
+                "número mais baixo de",
+                "pior número de",
+                "número mais recente",
+                "primeiro número de",
+                "min número de",
+                "mínimo número de"
+            ],
+            "pre_aggregation_functions": "min",
+            "pre_cut_text": true
+        },
+        "superlative max": {
+            "reserved_words": [
+                "maior",
+                "mais longe",
+                "mais alto",
+                "melhor",
+                "mais antigo",
+                "último",
+                "max",
+                "máximo",
+                "maior número de",
+                "número mais alto de",
+                "melhor número de",
+                "número mais antigo de",
+                "último número de",
+                "max número de",
+                "máximo número de"
+            ],
+            "pre_aggregation_functions": "max",
+            "pre_cut_text": true
+        },
+        "time scale options": {
+            "reserved_words": [
+                "diariamente",
+                "mensalmente",
+                "anualmente"
+            ],
+            "pre_subquery_replace_text": {
+                "diariamente": "dia",
+                "mensalmente": "mês",
+                "anualmente": "ano"
+            },
+            "use_replace_text_as_group_by": true,
+            "pre_subquery_aggregation_functions": "sum",
+            "pre_cut_text": false
+        },
+        "sub query min/max count": {
+            "reserved_words": [
+                "menor número de",
+                "número mais barato de",
+                "número mais próximo de",
+                "número mais baixo de",
+                "pior número de",
+                "número mais recente de",
+                "primeiro número de",
+                "min número de",
+                "mínimo número de",
+                "maior número de",
+                "número mais alto de",
+                "melhor número de",
+                "número mais antigo de",
+                "número mais recente de",
+                "max número de",
+                "máximo número de"
+            ],
+            "use_replace_text_as_group_by": false,
+            "remove_external_group_by": true,
+            "pre_subquery_aggregation_functions": "count",
+            "pre_cut_text": true
+        },
+        "sub query min/max sum": {
+            "reserved_words": [
+                "menor somado",
+                "mais curto somado",
+                "mais barato somado",
+                "mais próximo somado",
+                "mais baixo somado",
+                "pior somado",
+                "mais recente somado",
+                "primeiro somado",
+                "min somado",
+                "mínimo somado",
+                "maior somado",
+                "mais longe somado",
+                "mais alto somado",
+                "melhor somado",
+                "mais antigo somado",
+                "último somado",
+                "max somado",
+                "máximo somado"
+            ],
+            "use_replace_text_as_group_by": false,
+            "remove_external_group_by": true,
+            "pre_subquery_aggregation_functions": "sum",
+            "pre_cut_text": true
+        }
+    }
+}

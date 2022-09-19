@@ -1,0 +1,21 @@
+SENTENÇA: devolva as idades somadas no município de São Paulo por diagnóstico</br></br>**GLAMORISE Internal Properties**</br>**Preprocessor Properties**</br>pre_aggregation_fields = ['casos_idade']</br>pre_aggregation_functions = ['sum']</br>pre_cut_text = ['somadas', 'por']</br>pre_group_by = True</br>pre_group_by_fields = ['casos_diagnostico_covid19']</br>pre_prepared_query = 'devolva as idades no município de São Paulo diagnóstico'</br>**NLIDB Interface Properties**</br>nlidb_interface_first_attempt_sql = 'SELECT casos.diagnostico_covid19\nFROM casos\nWHERE casos.nome_munic LIKE "%Paulo%"'</br>nlidb_interface_second_attempt_sql = 'SELECT casos.diagnostico_covid19, casos.idade\nFROM casos\nWHERE casos.nome_munic LIKE "%Paulo%"'</br>nlidb_interface_sql = 'SELECT casos.diagnostico_covid19 as casos_diagnostico_covid19, casos.idade as casos_idade FROM casos WHERE casos.nome_munic LIKE "%Paulo%"'</br>**Postprocessor Properties**</br>pos_aggregation_fields = ['casos_idade']</br>pos_aggregation_functions = ['sum']</br>pos_glamorise_sql = 'SELECT casos_diagnostico_covid19, sum(casos_idade) as sum_casos_idade FROM NLIDB_result_set GROUP BY casos_diagnostico_covid19 ORDER BY casos_diagnostico_covid19 LIMIT 100'</br>**Timers**</br>timer_pre: 0.01 sec</br>timer_nlidb_execution_first_and_second_attempt: 30.30 sec</br>timer_nlidb_execution_third_attempt: nan sec</br>timer_nlidb_json_result_set: 0.02 sec</br>timer_pos: 0.30 sec</br>timer_exibition: 0.00 sec</br>**Results**<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>casos_diagnostico_covid19</th>
+      <th>sum_casos_idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CONFIRMADO</td>
+      <td>19814.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DESCARTADO</td>
+      <td>18979.0</td>
+    </tr>
+  </tbody>
+</table></br>total timer_pre : 0.40 sec</br>total timer_nlidb_execution_first_and_second_attempt : 610.33 sec</br>total timer_nlidb_json_result_set : 0.62 sec</br>total timer_pos : 13.09 sec</br>total timer_exibition : 0.07 sec</br>total timer_total : 624.57 sec

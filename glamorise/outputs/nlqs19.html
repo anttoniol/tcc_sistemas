@@ -1,0 +1,36 @@
+SENTENÇA: devolva quantos óbitos do tipo positivo há no município de São Paulo por raça</br></br>**GLAMORISE Internal Properties**</br>**Preprocessor Properties**</br>pre_aggregation_fields = ['casos_obito']</br>pre_aggregation_functions = ['count']</br>pre_cut_text = ['quantos', 'por']</br>pre_group_by = True</br>pre_group_by_fields = ['casos_raca_cor']</br>pre_prepared_query = 'devolva óbitos do tipo positivo há no município de São Paulo raça'</br>**NLIDB Interface Properties**</br>nlidb_interface_first_attempt_sql = 'SELECT casos.obito\nFROM casos\nWHERE casos.obito LIKE "%positivo%" AND casos.nome_munic LIKE "%Paulo%"'</br>nlidb_interface_second_attempt_sql = 'SELECT casos.obito, casos.raca_cor\nFROM casos\nWHERE casos.obito LIKE "%positivo%" AND casos.nome_munic LIKE "%Paulo%"'</br>nlidb_interface_sql = 'SELECT casos.obito as casos_obito, casos.raca_cor as casos_raca_cor FROM casos WHERE casos.obito LIKE "%positivo%" AND casos.nome_munic LIKE "%Paulo%"'</br>**Postprocessor Properties**</br>pos_aggregation_fields = ['casos_obito']</br>pos_aggregation_functions = ['count']</br>pos_glamorise_sql = 'SELECT casos_raca_cor, count(casos_obito) as count_casos_obito FROM NLIDB_result_set GROUP BY casos_raca_cor ORDER BY casos_raca_cor LIMIT 100'</br>**Timers**</br>timer_pre: 0.01 sec</br>timer_nlidb_execution_first_and_second_attempt: 29.66 sec</br>timer_nlidb_execution_third_attempt: nan sec</br>timer_nlidb_json_result_set: 0.01 sec</br>timer_pos: 0.23 sec</br>timer_exibition: 0.00 sec</br>**Results**<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>casos_raca_cor</th>
+      <th>count_casos_obito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BRANCA</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>IGNORADO</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NONE</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PARDA</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PRETA</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table></br>total timer_pre : 0.23 sec</br>total timer_nlidb_execution_first_and_second_attempt : 393.26 sec</br>total timer_nlidb_json_result_set : 0.49 sec</br>total timer_pos : 10.63 sec</br>total timer_exibition : 0.05 sec</br>total timer_total : 404.68 sec
