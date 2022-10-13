@@ -1,3 +1,8 @@
+# Adaptação para a língua portuguesa de ferramentas text-to-SQL
+
+Este repositório contém o código relacionado ao trabalho de
+conclusão de curso descrito [aqui](https://www.linux.ime.usp.br/~anttonio/mac0499/).
+
 # Instruções para utilização do repositório
 
 # Configurar MySQL
